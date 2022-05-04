@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/mwang840/JavaScriptPractice/issues"
   },
-  "homepage": "https://github.com/mwang840/JavaScriptPractice#readme"
+  "homepage": "https://github.com/mwang840/JavaScriptPractice#readme",
+  "dependencies": {
+    "node-modules": "^0.0.1"
+  }
 }
