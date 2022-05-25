@@ -1,3 +1,9 @@
 export function reverseWords(word){
-    return word.split(" ").reverse().join("").split("").reverse().join(" ");
+    let reversed = []
+    input = word.match(/S\+/g)
+    var answer = ""
+    for(let i = 0; i < word.length; ++i){
+        answer += reversed(word[i]).split(' ').reverse().join(' ') + " "
+    }
+    return answer
 }
