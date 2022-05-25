@@ -1,8 +1,5 @@
 function reverseWords(str){
-    var splitted = str.split(" ")
-    var reversed = []
-    for(let i = splitted.length; i >=0; i--){
-        reversed.push(splitted[i])
-    }
-    return reversed.join("")
+    return str.split(' ').map(function(word){
+        return word.split('').reverse().join('');
+      }).join(' ');
 }
