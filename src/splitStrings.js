@@ -1,16 +1,14 @@
 function solution(str){
-    holder = []
-    for(var i = 0; i < str.length(); ++i){
-        if(i % 2 == 0){
-            holder += str.split(/[,]+/)
-            holder+=str[i]
+    var toArr = str.split('')
+    var holder = []
+    for(let i = 0; i < str.length(); i += 2){
+        if(toArr[i+1]){
+            holder.push(toArr[i] + toArr[i+1])
+           
         }
         else{
-            holder+= str[i]
+            holder.push(toArr[i] + '_')
         }
-    }
-    if(str.length() % 2 == 1){
-        holder.push('_')
     }
     return holder
 }
