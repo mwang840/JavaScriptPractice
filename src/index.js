@@ -1,3 +1,5 @@
-function index(){
+function main(){
     console.log("Hello World");
 }
+
+main()
