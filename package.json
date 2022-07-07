@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/mwang840/JavaScriptPractice#readme",
   "dependencies": {
-    "node-modules": "^0.0.1"
+    "node-modules": "^0.1.0"
   }
 }
