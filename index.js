@@ -4,6 +4,9 @@ function main(){
     console.log(digital_root(140))
     console.log(reverseWords("EDP445"))
     console.log(digPow(89, 1))
+    console.log(toCamelCase("the-stealth-warrior"))
+    console.log(toCamelCase("The_Stealth_Warrior"))
+    console.log(toCamelCase("A-B-C"))
 }
 
 main()
@@ -39,4 +42,30 @@ function digPow(n, p){
         return -1
     }
     return modulus / n
+}
+
+function toCamelCase(str){
+    if(str === ''){
+        return ''
+      } else {
+    
+       let elements = []
+       let splitString = str.replace(/[^A-Z0-9]/ig, "_").split("_")
+       //[ 'the', 'stealth', 'warrior' ]
+       let firstElement = elements.push( splitString.splice(0,1) )
+    
+       for(let word in splitString){
+    
+         let splitWords = splitString[word].split('')
+         let capitalLetter = splitWords[0].toUpperCase()
+    
+         splitWords.splice(0,1, capitalLetter)
+         let joinedWord = splitWords.join('')
+    
+         elements.push(joinedWord)
+         let newSentence = elements.join('')
+    
+       }
+         return elements.join('')
+      }
 }
