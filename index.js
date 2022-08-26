@@ -7,6 +7,9 @@ function main(){
     console.log(toCamelCase("the-stealth-warrior"))
     console.log(toCamelCase("The_Stealth_Warrior"))
     console.log(toCamelCase("A-B-C"))
+    console.log(rectToSquare(5, 3))
+    console.log(rectToSquare(3, 5))
+    console.log(rectToSquare(20,14))
 }
 
 main()
@@ -68,4 +71,25 @@ function toCamelCase(str){
        }
          return elements.join('')
       }
+}
+
+function rectToSquare(lng, wdth){
+    //Get area
+    //Check if length is equal to width
+    if(lng === wdth){
+        return null;
+    }
+    let squareVal = []
+        while(lng != wdth){
+            if(lng > wdth){
+                lng -= wdth
+                squareVal.push(wdth);
+            }
+            else if (wdth > lng){
+                wdth -= lng
+                squareVal.push(lng);
+            }
+        }
+        squareVal.push(wdth)
+    return squareVal
 }
